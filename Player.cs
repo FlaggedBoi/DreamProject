@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DreamProject
 {
-  class Character
+  class Player
     {
         string name;
-        private int hp;
+        int hp;
         int XP;
         protected int[,] placement { get; private set; }
         List<String> inventory;
-        public Character(string name)
+        public Player(string name)
         {
             this.name = name;
         }       

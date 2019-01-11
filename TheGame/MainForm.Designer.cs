@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GameView = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.MenuPage = new System.Windows.Forms.TabPage();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -38,22 +37,14 @@
             this.BackFromSettings = new System.Windows.Forms.Button();
             this.SettingsMusicOn = new System.Windows.Forms.CheckBox();
             this.GamePage = new System.Windows.Forms.TabPage();
-            this.BackFromGame = new System.Windows.Forms.Button();
+            this.GameView = new System.Windows.Forms.PictureBox();
             this.ExitPage = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.GameView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.MenuPage.SuspendLayout();
             this.SettingsPage.SuspendLayout();
             this.GamePage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GameView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GameView
-            // 
-            this.GameView.Location = new System.Drawing.Point(0, 0);
-            this.GameView.Name = "GameView";
-            this.GameView.Size = new System.Drawing.Size(640, 480);
-            this.GameView.TabIndex = 0;
-            this.GameView.TabStop = false;
             // 
             // tabControl1
             // 
@@ -63,10 +54,12 @@
             this.tabControl1.Controls.Add(this.GamePage);
             this.tabControl1.Controls.Add(this.ExitPage);
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(-4, -5);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(640, 480);
+            this.tabControl1.Size = new System.Drawing.Size(648, 489);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
             // 
@@ -78,7 +71,7 @@
             this.MenuPage.Location = new System.Drawing.Point(4, 5);
             this.MenuPage.Name = "MenuPage";
             this.MenuPage.Padding = new System.Windows.Forms.Padding(3);
-            this.MenuPage.Size = new System.Drawing.Size(632, 471);
+            this.MenuPage.Size = new System.Drawing.Size(640, 480);
             this.MenuPage.TabIndex = 0;
             this.MenuPage.Text = "MenuPage";
             this.MenuPage.UseVisualStyleBackColor = true;
@@ -119,7 +112,7 @@
             this.SettingsPage.Controls.Add(this.SettingsMusicOn);
             this.SettingsPage.Location = new System.Drawing.Point(4, 5);
             this.SettingsPage.Name = "SettingsPage";
-            this.SettingsPage.Size = new System.Drawing.Size(632, 471);
+            this.SettingsPage.Size = new System.Drawing.Size(640, 480);
             this.SettingsPage.TabIndex = 3;
             this.SettingsPage.Text = "SettingsPage";
             this.SettingsPage.UseVisualStyleBackColor = true;
@@ -146,29 +139,29 @@
             // 
             // GamePage
             // 
-            this.GamePage.Controls.Add(this.BackFromGame);
+            this.GamePage.Controls.Add(this.GameView);
             this.GamePage.Location = new System.Drawing.Point(4, 5);
+            this.GamePage.Margin = new System.Windows.Forms.Padding(0);
             this.GamePage.Name = "GamePage";
-            this.GamePage.Padding = new System.Windows.Forms.Padding(3);
-            this.GamePage.Size = new System.Drawing.Size(632, 471);
+            this.GamePage.Size = new System.Drawing.Size(640, 480);
             this.GamePage.TabIndex = 1;
             this.GamePage.Text = "GamePage";
             this.GamePage.UseVisualStyleBackColor = true;
             // 
-            // BackFromGame
+            // GameView
             // 
-            this.BackFromGame.Location = new System.Drawing.Point(228, 430);
-            this.BackFromGame.Name = "BackFromGame";
-            this.BackFromGame.Size = new System.Drawing.Size(146, 33);
-            this.BackFromGame.TabIndex = 0;
-            this.BackFromGame.Text = "Back to menu";
-            this.BackFromGame.Click += new System.EventHandler(this.BackFromGame_Click);
+            this.GameView.Image = global::TheGame.Properties.Resources.level1;
+            this.GameView.Location = new System.Drawing.Point(0, 0);
+            this.GameView.Name = "GameView";
+            this.GameView.Size = new System.Drawing.Size(640, 480);
+            this.GameView.TabIndex = 3;
+            this.GameView.TabStop = false;
             // 
             // ExitPage
             // 
             this.ExitPage.Location = new System.Drawing.Point(4, 5);
             this.ExitPage.Name = "ExitPage";
-            this.ExitPage.Size = new System.Drawing.Size(632, 471);
+            this.ExitPage.Size = new System.Drawing.Size(640, 480);
             this.ExitPage.TabIndex = 2;
             this.ExitPage.Text = "ExitPage";
             this.ExitPage.UseVisualStyleBackColor = true;
@@ -179,22 +172,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.GameView);
+            this.KeyPreview = true;
             this.Name = "MainForm";
             this.Text = "DreamProject";
-            ((System.ComponentModel.ISupportInitialize)(this.GameView)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.MenuPage.ResumeLayout(false);
             this.SettingsPage.ResumeLayout(false);
             this.SettingsPage.PerformLayout();
             this.GamePage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GameView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox GameView;
+        
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage MenuPage;
         private System.Windows.Forms.TabPage GamePage;
@@ -205,7 +197,7 @@
         private System.Windows.Forms.TabPage SettingsPage;
         private System.Windows.Forms.Button BackFromSettings;
         private System.Windows.Forms.CheckBox SettingsMusicOn;
-        private System.Windows.Forms.Button BackFromGame;
+        private System.Windows.Forms.PictureBox GameView;
     }
 }
 

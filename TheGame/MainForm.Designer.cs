@@ -175,6 +175,7 @@
             this.KeyPreview = true;
             this.Name = "MainForm";
             this.Text = "DreamProject";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.MenuPage.ResumeLayout(false);
             this.SettingsPage.ResumeLayout(false);

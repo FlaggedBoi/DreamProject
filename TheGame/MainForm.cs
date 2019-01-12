@@ -51,6 +51,33 @@ namespace TheGame
                     tabControl1.SelectedTab = GamePage;
                 }
             }
+
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    Player.Top -= 3;
+                    break;
+                case Keys.A:
+                    Player.Left -= 3;
+                    break;
+                case Keys.S:
+                    Player.Top += 3;
+                    break;
+                case Keys.D:
+                    Player.Left += 3;
+                    break;
+            }
+        }
+
+        private void Player_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            this.KeyDown += MainForm_KeyDown;
+        }
+
+        private void GamePage_Enter(object sender, EventArgs e)
+        {
+            Console.WriteLine("GamePage Enter");
+            this.ActiveControl = Player;
         }
     }
 }

@@ -39,11 +39,13 @@
             this.GamePage = new System.Windows.Forms.TabPage();
             this.GameView = new System.Windows.Forms.PictureBox();
             this.ExitPage = new System.Windows.Forms.TabPage();
+            this.Player = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.MenuPage.SuspendLayout();
             this.SettingsPage.SuspendLayout();
             this.GamePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GameView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -81,7 +83,7 @@
             this.ExitButton.Location = new System.Drawing.Point(175, 241);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(255, 42);
-            this.ExitButton.TabIndex = 0;
+            this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -91,7 +93,7 @@
             this.SettingsButton.Location = new System.Drawing.Point(175, 178);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(255, 42);
-            this.SettingsButton.TabIndex = 0;
+            this.SettingsButton.TabIndex = 1;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.UseVisualStyleBackColor = true;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
@@ -139,6 +141,7 @@
             // 
             // GamePage
             // 
+            this.GamePage.Controls.Add(this.Player);
             this.GamePage.Controls.Add(this.GameView);
             this.GamePage.Location = new System.Drawing.Point(4, 5);
             this.GamePage.Margin = new System.Windows.Forms.Padding(0);
@@ -147,6 +150,7 @@
             this.GamePage.TabIndex = 1;
             this.GamePage.Text = "GamePage";
             this.GamePage.UseVisualStyleBackColor = true;
+            this.GamePage.Enter += new System.EventHandler(this.GamePage_Enter);
             // 
             // GameView
             // 
@@ -166,6 +170,16 @@
             this.ExitPage.Text = "ExitPage";
             this.ExitPage.UseVisualStyleBackColor = true;
             // 
+            // Player
+            // 
+            this.Player.Image = global::TheGame.Properties.Resources.player;
+            this.Player.Location = new System.Drawing.Point(217, 53);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(28, 28);
+            this.Player.TabIndex = 4;
+            this.Player.TabStop = false;
+            this.Player.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Player_PreviewKeyDown);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +196,7 @@
             this.SettingsPage.PerformLayout();
             this.GamePage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GameView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +214,7 @@
         private System.Windows.Forms.Button BackFromSettings;
         private System.Windows.Forms.CheckBox SettingsMusicOn;
         private System.Windows.Forms.PictureBox GameView;
+        private System.Windows.Forms.PictureBox Player;
     }
 }
 
